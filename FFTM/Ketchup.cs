@@ -10,22 +10,22 @@ namespace WindowsFormsApp1
     {
         public override int GetCalories()
         {
-            throw new NotImplementedException();
+            return 20;
         }
 
         public override int GetGramsOfFat()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override int GetGramsOfProtein()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override int GetGramsOfSugar()
         {
-            throw new NotImplementedException();
+            return 4;
         }
     }
 }

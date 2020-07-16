@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
         Hotdog hotdog;
         Pizza pizza;
         Chicken chicken;
+
+        Mustard m = new Mustard();
+        Ketchup k = new Ketchup();
+        
         int choiceIndex;
         public Form1()
         {
@@ -79,22 +83,35 @@ namespace WindowsFormsApp1
         {
             if(choiceIndex == 0)
             {
-                foreach(var item in SpecBox.SelectedItems)
+                if (SpecBox.SelectedIndex == 0)
                 {
-                    string ts = item.ToString();
-                    if(ts == "Ketchup")
-                    {
-                        Ketchup k = new Ketchup();
-                        burger.Conds.Add(k);
-                    }
-                    if(ts == "Mustard")
-                    {
-                        Mustard m = new Mustard();
-                        burger.Conds.Add(m);
-                    }
-
+                    burger.AddCondiment(k);
                 }
-                
+                if (SpecBox.SelectedIndex != 0)
+                {
+                    burger.RemoveCondiment(k);
+                }
+
+
+                if (SpecBox.SelectedIndex == 1)
+                {
+                    burger.AddCondiment(m);
+                }
+                if (SpecBox.SelectedIndex != 1)
+                {
+                    burger.RemoveCondiment(m);
+                }
+
+
+                if (SpecBox.SelectedIndex == 2)
+                {
+                    burger.AddCondiment(m);
+                }
+                if (SpecBox.SelectedIndex != 2)
+                {
+                    burger.RemoveCondiment(m);
+                }
+
                 burger.Update(totalcalbox,SpecBox);
             }
         }
