@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.ListBox;
 
 namespace WindowsFormsApp1
 {
@@ -81,12 +82,38 @@ namespace WindowsFormsApp1
 
         private void SpecBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             switch (choiceIndex)
             {
+                
                 case 0:
-                    if (SpecBox.SelectedIndex == 0)
+                    if (SpecBox.SelectedItems.Contains("Ketchup"))
                     {
                         burger.AddCondiment(k);
+                        Console.WriteLine("kkkkkkkkk");
+                    }
+                    else
+                    {
+                        burger.RemoveCondiment(k);
+                        Console.WriteLine("NoKetchup");
+                    }
+                    if (SpecBox.SelectedItems.Contains("Mustard"))
+                    {
+                        burger.AddCondiment(m);
+                        Console.WriteLine("kkkkkkkkk");
+                    }
+                    else
+                    {
+                        burger.RemoveCondiment(m);
+                        Console.WriteLine("NoKetchup");
+                    }
+
+
+
+                    /*if (SpecBox.SelectedIndex == 0)
+                    {
+                        burger.AddCondiment(k);
+                        
                     }
                     if (SpecBox.SelectedIndex != 0)
                     {
@@ -101,7 +128,7 @@ namespace WindowsFormsApp1
                     if (SpecBox.SelectedIndex != 1)
                     {
                         burger.RemoveCondiment(m);
-                    }
+                    }*/
 
                     burger.Update(totalcalbox, SpecBox);
                     break;

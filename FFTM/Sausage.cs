@@ -8,14 +8,33 @@ namespace WindowsFormsApp1
 {
     class Sausage
     {
-        readonly int Calories;
-        const int GramsOfProteins = 28;
-        const int GramsOfSugar = 0;
-        const int GramsOfFat = 16;
+        readonly int calories;
+        const int gramsOfProteins = 28;
+        const int gramsOfSugar = 0;
+        const int gramsOfFat = 16;
 
         public Sausage()
         {
-            Calories = CalCalc.Calories(GramsOfProteins, GramsOfFat, GramsOfSugar);
+            calories = CalCalc.Calories(GramsOfProteins, GramsOfFat, GramsOfSugar);
+        }
+
+        public int GramsOfProteins
+        {
+            get { return gramsOfProteins; }
+        }
+        public int GramsOfFat
+        {
+            get { return gramsOfFat; }
+        }
+
+        public int GramsOfSugar
+        {
+            get { return gramsOfSugar; }
+        }
+
+        public int Calories
+        {
+            get { return calories; }
         }
     }
 }

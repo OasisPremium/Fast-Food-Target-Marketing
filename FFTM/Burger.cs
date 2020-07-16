@@ -53,11 +53,6 @@ namespace WindowsFormsApp1
             
         }
 
-        public void plainify()
-        {
-            conds.Clear();
-        }
-
         public override void RemoveCondiment(Condiments c)
         {
             conds.Remove(c);
