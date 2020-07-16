@@ -82,7 +82,8 @@
             // 
             // SpecBox
             // 
-            this.SpecBox.AccessibleName = "";
+            this.SpecBox.AccessibleDescription = "SpecBox";
+            this.SpecBox.AccessibleName = "SpecBox";
             this.SpecBox.FormattingEnabled = true;
             this.SpecBox.Items.AddRange(new object[] {
             " "});
@@ -92,6 +93,7 @@
             this.SpecBox.Size = new System.Drawing.Size(119, 95);
             this.SpecBox.TabIndex = 10;
             this.SpecBox.Tag = "SpecBox";
+            this.SpecBox.SelectedIndexChanged += new System.EventHandler(this.SpecBox_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -150,12 +152,14 @@
             // 
             // totalcalbox
             // 
+            this.totalcalbox.AccessibleName = "totalcalbox";
             this.totalcalbox.Location = new System.Drawing.Point(18, 241);
             this.totalcalbox.Multiline = true;
             this.totalcalbox.Name = "totalcalbox";
             this.totalcalbox.ReadOnly = true;
             this.totalcalbox.Size = new System.Drawing.Size(100, 20);
             this.totalcalbox.TabIndex = 17;
+            this.totalcalbox.Tag = "totalcalbox";
             // 
             // Form1
             // 
