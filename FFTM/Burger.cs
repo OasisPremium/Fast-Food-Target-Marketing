@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    class Burger
+    class Burger : Burdog
     {
         private Burgerbread bread;
         private Beefpatty bp;
@@ -43,9 +43,14 @@ namespace WindowsFormsApp1
             T.Text = this.calories.ToString();
         }
 
-        public void AddCondiment(Condiments c)
+        public override void AddCondiment(Condiments c)
         {
-            conds.Add(c);
+
+            if(!conds.Contains(c))
+            {
+                conds.Add(c);
+            }
+            
         }
 
         public void plainify()
@@ -53,7 +58,7 @@ namespace WindowsFormsApp1
             conds.Clear();
         }
 
-        public void RemoveCondiment(Condiments c)
+        public override void RemoveCondiment(Condiments c)
         {
             conds.Remove(c);
         }

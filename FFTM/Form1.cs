@@ -81,38 +81,53 @@ namespace WindowsFormsApp1
 
         private void SpecBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(choiceIndex == 0)
+            switch (choiceIndex)
             {
-                if (SpecBox.SelectedIndex == 0)
-                {
-                    burger.AddCondiment(k);
-                }
-                if (SpecBox.SelectedIndex != 0)
-                {
-                    burger.RemoveCondiment(k);
-                }
+                case 0:
+                    if (SpecBox.SelectedIndex == 0)
+                    {
+                        burger.AddCondiment(k);
+                    }
+                    if (SpecBox.SelectedIndex != 0)
+                    {
+                        burger.RemoveCondiment(k);
+                    }
 
 
-                if (SpecBox.SelectedIndex == 1)
-                {
-                    burger.AddCondiment(m);
-                }
-                if (SpecBox.SelectedIndex != 1)
-                {
-                    burger.RemoveCondiment(m);
-                }
+                    if (SpecBox.SelectedIndex == 1)
+                    {
+                        burger.AddCondiment(m);
+                    }
+                    if (SpecBox.SelectedIndex != 1)
+                    {
+                        burger.RemoveCondiment(m);
+                    }
+
+                    burger.Update(totalcalbox, SpecBox);
+                    break;
+
+                case 1:
+                    if (SpecBox.SelectedIndex == 0)
+                    {
+                        hotdog.AddCondiment(k);
+                    }
+                    if (SpecBox.SelectedIndex != 0)
+                    {
+                        burger.RemoveCondiment(k);
+                    }
 
 
-                if (SpecBox.SelectedIndex == 2)
-                {
-                    burger.AddCondiment(m);
-                }
-                if (SpecBox.SelectedIndex != 2)
-                {
-                    burger.RemoveCondiment(m);
-                }
+                    if (SpecBox.SelectedIndex == 1)
+                    {
+                        burger.AddCondiment(m);
+                    }
+                    if (SpecBox.SelectedIndex != 1)
+                    {
+                        burger.RemoveCondiment(m);
+                    }
 
-                burger.Update(totalcalbox,SpecBox);
+                    burger.Update(totalcalbox, SpecBox);
+                    break;
             }
         }
     }
