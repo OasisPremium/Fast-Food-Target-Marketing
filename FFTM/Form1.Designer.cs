@@ -39,7 +39,7 @@
             this.CommentBox = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalcalbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -148,19 +148,21 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Avg. Calories:";
             // 
-            // textBox1
+            // totalcalbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 241);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.totalcalbox.Location = new System.Drawing.Point(18, 241);
+            this.totalcalbox.Multiline = true;
+            this.totalcalbox.Name = "totalcalbox";
+            this.totalcalbox.ReadOnly = true;
+            this.totalcalbox.Size = new System.Drawing.Size(100, 20);
+            this.totalcalbox.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 300);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totalcalbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CommentBox);
@@ -192,7 +194,7 @@
         private System.Windows.Forms.RichTextBox CommentBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox totalcalbox;
     }
 }
 

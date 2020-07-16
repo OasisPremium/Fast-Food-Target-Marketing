@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
 {
     class Burgerbread : Bread
     {
+        int calories;
         public override int Calories()
         {
             return 0;
@@ -30,7 +31,7 @@ namespace WindowsFormsApp1
 
         public Burgerbread()
         {
-            int totalcal = CalCalc.Calories(GramsOfProtein(),GramsOfFat(),GramsOfSugar());
+            calories = CalCalc.Calories(GramsOfProtein(),GramsOfFat(),GramsOfSugar());
         }
     }
 }

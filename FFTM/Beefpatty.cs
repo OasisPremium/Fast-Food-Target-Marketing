@@ -9,13 +9,32 @@ namespace WindowsFormsApp1
     class Beefpatty
     {
         readonly int Calories;
-        const int GramsOfProteins = 28;
-        const int GramsOfSugar = 0;
-        const int GramsOfFat = 16;
+        private const int gramsOfProteins = 28;
+        const int gramsOfSugar = 0;
+        const int gramsOfFat = 16;
+
 
         public Beefpatty()
         {
-            Calories = CalCalc.Calories(GramsOfProteins, GramsOfFat, GramsOfSugar);
+            Calories = CalCalc.Calories(GramsOfProteins, gramsOfFat, gramsOfSugar);
         }
+
+
+        
+        public int GramsOfProteins
+        {
+            get { return GramsOfProteins; }
+        }
+
+        public int GramsOfFat
+        {
+            get { return GramsOfFat; }
+        }
+
+        public int GramsOfSugar
+        {
+            get { return GramsOfSugar; }
+        }
+
     }
 }

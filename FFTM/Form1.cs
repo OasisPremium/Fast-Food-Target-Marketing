@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Mayo");
             SpecBox.Items.Add("Cheese");
             SpecBox.Items.Add("Bacon");
+            Burger burger = new Burger();
+
         }
 
         private void Hotdog_Click(object sender, EventArgs e)
@@ -37,6 +39,8 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Mayo");
             SpecBox.Items.Add("Cheese");
             SpecBox.Items.Add("Bacon");
+
+
         }
 
         private void Pizza_Click(object sender, EventArgs e)
@@ -48,6 +52,8 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Vegan");
             SpecBox.Items.Add("Hawaiian");
             SpecBox.Items.Add("Brooklyn Style");
+
+
         }
 
         private void Chicken_Click(object sender, EventArgs e)
@@ -59,6 +65,8 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Chicken sandwich");
             SpecBox.Items.Add("Chicken wrap");
             SpecBox.Items.Add("Chicken salad");
+
+
         }
     }
 }
