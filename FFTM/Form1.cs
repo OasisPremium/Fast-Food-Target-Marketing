@@ -20,6 +20,10 @@ namespace WindowsFormsApp1
 
         Mustard m = new Mustard();
         Ketchup k = new Ketchup();
+        Relish r = new Relish();
+        Mayo ma = new Mayo();
+        Bacon b = new Bacon();
+        Cheese c = new Cheese();
         
         int choiceIndex;
         public Form1()
@@ -90,45 +94,53 @@ namespace WindowsFormsApp1
                     if (SpecBox.SelectedItems.Contains("Ketchup"))
                     {
                         burger.AddCondiment(k);
-                        Console.WriteLine("kkkkkkkkk");
+                        
                     }
                     else
                     {
                         burger.RemoveCondiment(k);
-                        Console.WriteLine("NoKetchup");
+                        
                     }
                     if (SpecBox.SelectedItems.Contains("Mustard"))
                     {
                         burger.AddCondiment(m);
-                        Console.WriteLine("kkkkkkkkk");
                     }
                     else
                     {
                         burger.RemoveCondiment(m);
-                        Console.WriteLine("NoKetchup");
                     }
-
-
-
-                    /*if (SpecBox.SelectedIndex == 0)
+                    if (SpecBox.SelectedItems.Contains("Relish"))
                     {
-                        burger.AddCondiment(k);
-                        
+                        burger.AddCondiment(r);
                     }
-                    if (SpecBox.SelectedIndex != 0)
+                    else
                     {
-                        burger.RemoveCondiment(k);
+                        burger.RemoveCondiment(r);
                     }
-
-
-                    if (SpecBox.SelectedIndex == 1)
+                    if (SpecBox.SelectedItems.Contains("Mayo"))
                     {
-                        burger.AddCondiment(m);
+                        burger.AddCondiment(ma);
                     }
-                    if (SpecBox.SelectedIndex != 1)
+                    else
                     {
-                        burger.RemoveCondiment(m);
-                    }*/
+                        burger.RemoveCondiment(ma);
+                    }
+                    if (SpecBox.SelectedItems.Contains("Bacon"))
+                    {
+                        burger.AddCondiment(b);
+                    }
+                    else
+                    {
+                        burger.RemoveCondiment(b);
+                    }
+                    if (SpecBox.SelectedItems.Contains("Cheese"))
+                    {
+                        burger.AddCondiment(c);
+                    }
+                    else
+                    {
+                        burger.RemoveCondiment(c);
+                    }
 
                     burger.Update(totalcalbox, SpecBox);
                     break;

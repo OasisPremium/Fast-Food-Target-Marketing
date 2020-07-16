@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bacon.cs" />
     <Compile Include="Beefpatty.cs" />
     <Compile Include="Bread.cs" />
     <Compile Include="Burger.cs" />
     <Compile Include="Burgerbread.cs" />
     <Compile Include="CalCalc.cs" />
+    <Compile Include="Cheese.cs" />
     <Compile Include="Chicken.cs" />
     <Compile Include="Condiments.cs" />
     <Compile Include="Form1.cs">
