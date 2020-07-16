@@ -19,11 +19,10 @@ namespace WindowsFormsApp1
 
         public Burger()
         {
-            Mustard m = new Mustard();
-            conds.Add(m);
+
         }
 
-        public int nutfacts()
+        public void nutfacts()
         {
             foreach(Condiments c in conds)
             {
@@ -32,7 +31,7 @@ namespace WindowsFormsApp1
             this.gramsoffat = bread.GramsOfFat() + bp.GramsOfFat;
             this.gramsofprotein = bread.GramsOfProtein() + bp.GramsOfProteins;
             this.gramsofsugar = bread.GramsOfSugar() + bp.GramsOfSugar;
-            return 0;
+            this.calories = bread.Calories() + bp.Calories;
         }
 
     }
