@@ -8,12 +8,6 @@ namespace WindowsFormsApp1
 {
     static class CalCalc
     {
-        enum MainMeal{
-            Burger = 1,
-            HotDog = 2,
-            Pizza = 3,
-            Chicken = 4
-        }
         //return calories based on grams of prot/fat/sug
         static public int Calories(int protein, int fat, int sugar)
         {
@@ -24,7 +18,7 @@ namespace WindowsFormsApp1
         //Show total calories in textbox
         static public int TotalCalories()
         {
-            
+
             return 0;
         }
     }

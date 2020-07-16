@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Cheese");
             SpecBox.Items.Add("Bacon");
 
-
+            Hotdog hotdog = new Hotdog();
         }
 
         private void Pizza_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Vegan");
             SpecBox.Items.Add("Hawaiian");
             SpecBox.Items.Add("Brooklyn Style");
-
+            
 
         }
 

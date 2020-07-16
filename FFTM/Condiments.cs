@@ -14,5 +14,6 @@ namespace WindowsFormsApp1
         abstract public int GetCalories();
         public abstract int GetGramsOfSugar();
         public abstract int GetGramsOfProtein();
+        public abstract int GetGramsOfFat();
     }
 }

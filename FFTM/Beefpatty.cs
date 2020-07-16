@@ -16,24 +16,24 @@ namespace WindowsFormsApp1
 
         public Beefpatty()
         {
-            calories = CalCalc.Calories(GramsOfProteins, gramsOfFat, gramsOfSugar);
+            calories = CalCalc.Calories(gramsOfProteins, gramsOfFat, gramsOfSugar);
         }
 
 
         
         public int GramsOfProteins
         {
-            get { return GramsOfProteins; }
+            get { return gramsOfProteins; }
         }
 
         public int GramsOfFat
         {
-            get { return GramsOfFat; }
+            get { return gramsOfFat; }
         }
 
         public int GramsOfSugar
         {
-            get { return GramsOfSugar; }
+            get { return gramsOfSugar; }
         }
 
         public int Calories

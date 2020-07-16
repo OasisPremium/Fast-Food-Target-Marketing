@@ -13,6 +13,11 @@ namespace WindowsFormsApp1
             return 0;
         }
 
+        public override int GetGramsOfFat()
+        {
+            throw new NotImplementedException();
+        }
+
         public override int GetGramsOfProtein()
         {
             return 0;

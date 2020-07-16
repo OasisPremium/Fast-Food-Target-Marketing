@@ -19,20 +19,20 @@ namespace WindowsFormsApp1
 
         public Burger()
         {
-
-        }
-
-        public void nutfacts()
-        {
-            foreach(Condiments c in conds)
-            {
-
-            }
             this.gramsoffat = bread.GramsOfFat() + bp.GramsOfFat;
             this.gramsofprotein = bread.GramsOfProtein() + bp.GramsOfProteins;
             this.gramsofsugar = bread.GramsOfSugar() + bp.GramsOfSugar;
-            this.calories = bread.Calories() + bp.Calories;
+
+            foreach(Condiments condiment in conds)
+            {
+                this.gramsofprotein = gramsofprotein + condiment.GetGramsOfProtein();
+                this.gramsoffat = gramsoffat + condiment.GetGramsOfFat();
+                this.gramsofsugar = gramsofsugar + condiment.GetGramsOfSugar();
+            }
+            this.calories = CalCalc.Calories(gramsofprotein,gramsoffat,gramsofsugar);
         }
+
+        
 
     }
 }
