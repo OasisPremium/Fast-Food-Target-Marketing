@@ -15,12 +15,12 @@ namespace WindowsFormsApp1
 
         public override int gramsofprotein()
         {
-            return 18;
+            return 16;
         }
 
         public override int gramsofsugar()
         {
-            return 4;
+            return 2;
         }
     }
 }

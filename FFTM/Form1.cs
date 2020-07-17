@@ -16,20 +16,15 @@ namespace WindowsFormsApp1
         Burger burger;
         Hotdog hotdog;
         Pizza pizza;
-
-
-        ChickenBreast cb = new ChickenBreast();
-        ChickenThigh ct = new ChickenThigh();
+        ChickenMeal ch;
         Mustard m = new Mustard();
         Ketchup k = new Ketchup();
         Relish r = new Relish();
         Mayo ma = new Mayo();
         Bacon b = new Bacon();
         Cheese c = new Cheese();
-        
         int choiceIndex;
-
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -81,6 +76,7 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Breast");
             SpecBox.Items.Add("Thigh");
             SpecBox.Items.Add("Fried");
+            ch = new ChickenMeal(totalcalbox, SpecBox);
             choiceIndex = 3;
         }
 
@@ -256,63 +252,40 @@ namespace WindowsFormsApp1
 
                     pizza.Update(totalcalbox, SpecBox);
                     break;
-                /*case 3:
-                    if (SpecBox.SelectedItems.Contains("Breast"))
+
+                case 3:
+                    bool breast = false;
+                    bool fried = false;
+                    bool thigh = false;
+                    if (SpecBox.SelectedItems.Contains("Fried"))
                     {
-                        cb.calories;
+                        fried = true;
                     }
                     else
                     {
-                        chicken.RemoveCondiment(k);
+                        fried = false;
+                    }
+                    if (SpecBox.SelectedItems.Contains("Breast"))
+                    {
+                        breast = true;
+                    }
+                    else
+                    {
+                        breast = false;
                     }
 
                     if (SpecBox.SelectedItems.Contains("Thigh"))
                     {
-                        chicken.AddCondiment(m);
+                        thigh = true;
                     }
                     else
                     {
-                        chicken.RemoveCondiment(m);
+                        thigh = false;
                     }
 
-                    if (SpecBox.SelectedItems.Contains("Fried"))
-                    {
-                        chicken.AddCondiment(r);
-                    }
-                    else
-                    {
-                        chicken.RemoveCondiment(r);
-                    }
-
-                    if (SpecBox.SelectedItems.Contains("Mayo"))
-                    {
-                        chicken.AddCondiment(ma);
-                    }
-                    else
-                    {
-                        chicken.RemoveCondiment(ma);
-                    }
-
-                    if (SpecBox.SelectedItems.Contains("Bacon"))
-                    {
-                        chicken.AddCondiment(b);
-                    }
-                    else
-                    {
-                        chicken.RemoveCondiment(b);
-                    }
-
-                    if (SpecBox.SelectedItems.Contains("Cheese"))
-                    {
-                        chicken.AddCondiment(c);
-                    }
-                    else
-                    {
-                        chicken.RemoveCondiment(c);
-                    }
-
-                    chicken.Update(totalcalbox, SpecBox);
-                    break;*/
+                   
+                    ch.Update(totalcalbox,thigh,breast,fried);
+                    break;
             }
         }
     }

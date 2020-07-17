@@ -54,6 +54,7 @@
     <Compile Include="CalCalc.cs" />
     <Compile Include="Cheese.cs" />
     <Compile Include="Chicken.cs" />
+    <Compile Include="ChickenMeal.cs" />
     <Compile Include="ChickenBreast.cs" />
     <Compile Include="ChickenThigh.cs" />
     <Compile Include="Condiments.cs" />
