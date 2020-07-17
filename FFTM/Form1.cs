@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
 
         private void Burger_Click(object sender, EventArgs e)
         {
+            
             SpecBox.Items.Clear();
             SpecBox.Items.Add("Ketchup");
             SpecBox.Items.Add("Mustard");

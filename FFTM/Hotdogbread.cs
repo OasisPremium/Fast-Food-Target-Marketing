@@ -8,9 +8,16 @@ namespace WindowsFormsApp1
 {
     class Hotdogbread : Bread
     {
-        public override int Calories()
+        int calories;
+
+        public Hotdogbread()
         {
-            return CalCalc.Calories(GramsOfProtein(),GramsOfFat(),GramsOfSugar());
+            calories = CalCalc.Calories(GramsOfProtein(), GramsOfFat(), GramsOfSugar());
+        }
+
+        public override int GramsOfFat()
+        {
+            return 123123;
         }
 
         public override int GramsOfProtein()
@@ -20,12 +27,7 @@ namespace WindowsFormsApp1
 
         public override int GramsOfSugar()
         {
-            return 3;
-        }
-
-        public override int GramsOfFat()
-        {
-            return 0;
+            return 212;
         }
     }
 }

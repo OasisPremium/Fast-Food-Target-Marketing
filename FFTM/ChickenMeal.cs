@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             this.gramsoffat = 0;
             this.gramsofsugar = 0;
             this.gramsofprotein = 0;
+            T.Text = "";
         }
 
         private int calories()

@@ -9,29 +9,27 @@ namespace WindowsFormsApp1
     class Burgerbread : Bread
     {
         int calories;
-        public override int Calories()
-        {
-            return 0;
-        }
-
-        public override int GramsOfProtein()
-        {
-            return 4;
-        }
-
-        public override int GramsOfSugar()
-        {
-            return 28;
-        }
-
-        public override int GramsOfFat()
-        {
-            return 2;
-        }
 
         public Burgerbread()
         {
             calories = CalCalc.Calories(GramsOfProtein(),GramsOfFat(),GramsOfSugar());
         }
+
+        public override int GramsOfFat()
+        {
+            return 123;
+        }
+
+        public override int GramsOfProtein()
+        {
+            return 123;
+        }
+
+        public override int GramsOfSugar()
+        {
+            return 123123;
+        }
     }
 }
+
+

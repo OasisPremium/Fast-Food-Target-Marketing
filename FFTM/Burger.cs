@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             
             foreach (Condiments condiment in conds)
             {
-                Console.WriteLine(condiment);
                 this.gramsofprotein = gramsofprotein + condiment.GetGramsOfProtein();
                 this.gramsoffat = gramsoffat + condiment.GetGramsOfFat();
                 this.gramsofsugar = gramsofsugar + condiment.GetGramsOfSugar();
@@ -55,9 +54,12 @@ namespace WindowsFormsApp1
 
         public override void RemoveCondiment(Condiments c)
         {
-            conds.Remove(c);
+            if (conds.Contains(c))
+            {
+                conds.Remove(c);
+            }
+            
         }
-
         
 
     }

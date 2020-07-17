@@ -8,12 +8,9 @@ namespace WindowsFormsApp1
 {
     abstract class Bread
     {
-        //Just like condiments, we know some basic components of a bread
-        //But we are not sure of what TYPE of bread and specs
-        public abstract int Calories();
+        private int calories;
         public abstract int GramsOfSugar();
         public abstract int GramsOfProtein();
         public abstract int GramsOfFat();
-
     }
 }
