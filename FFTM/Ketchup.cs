@@ -8,9 +8,11 @@ namespace WindowsFormsApp1
 {
     class Ketchup : Condiments
     {
+        
         public override int GetCalories()
         {
             return 20;
+            
         }
 
         public override int GetGramsOfFat()

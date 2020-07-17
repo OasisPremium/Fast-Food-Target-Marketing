@@ -54,6 +54,8 @@
     <Compile Include="CalCalc.cs" />
     <Compile Include="Cheese.cs" />
     <Compile Include="Chicken.cs" />
+    <Compile Include="ChickenBreast.cs" />
+    <Compile Include="ChickenThigh.cs" />
     <Compile Include="Condiments.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -68,6 +70,8 @@
     <Compile Include="Mayo.cs" />
     <Compile Include="Mustard.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaDough.cs" />
+    <Compile Include="PizzaSauce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relish.cs" />

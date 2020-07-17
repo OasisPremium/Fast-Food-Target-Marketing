@@ -16,8 +16,10 @@ namespace WindowsFormsApp1
         Burger burger;
         Hotdog hotdog;
         Pizza pizza;
-        Chicken chicken;
 
+
+        ChickenBreast cb = new ChickenBreast();
+        ChickenThigh ct = new ChickenThigh();
         Mustard m = new Mustard();
         Ketchup k = new Ketchup();
         Relish r = new Relish();
@@ -26,6 +28,8 @@ namespace WindowsFormsApp1
         Cheese c = new Cheese();
         
         int choiceIndex;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -54,33 +58,29 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Mayo");
             SpecBox.Items.Add("Cheese");
             SpecBox.Items.Add("Bacon");
-            hotdog = new Hotdog();
+            hotdog = new Hotdog(totalcalbox, SpecBox);
             choiceIndex = 1;
         }
 
         private void Pizza_Click(object sender, EventArgs e)
         {
             SpecBox.Items.Clear();
-            SpecBox.Items.Add("Peperonni & Cheese");
-            SpecBox.Items.Add("All dressed");
+            SpecBox.Items.Add("Peperonni");
+            SpecBox.Items.Add("Cheese");
             SpecBox.Items.Add("BBQ Chicken");
-            SpecBox.Items.Add("Vegan");
-            SpecBox.Items.Add("Hawaiian");
+            SpecBox.Items.Add("Veggies");
+            SpecBox.Items.Add("Ham & Pineapple");
             SpecBox.Items.Add("Brooklyn Style");
-            pizza = new Pizza();
+            pizza = new Pizza(totalcalbox, SpecBox);
             choiceIndex = 2;
         }
 
         private void Chicken_Click(object sender, EventArgs e)
         {
             SpecBox.Items.Clear();
-            SpecBox.Items.Add("Roasted");
+            SpecBox.Items.Add("Breast");
+            SpecBox.Items.Add("Thigh");
             SpecBox.Items.Add("Fried");
-            SpecBox.Items.Add("Spicy");
-            SpecBox.Items.Add("Chicken sandwich");
-            SpecBox.Items.Add("Chicken wrap");
-            SpecBox.Items.Add("Chicken salad");
-            chicken = new Chicken();
             choiceIndex = 3;
         }
 
@@ -94,50 +94,47 @@ namespace WindowsFormsApp1
                     if (SpecBox.SelectedItems.Contains("Ketchup"))
                     {
                         burger.AddCondiment(k);
-                        
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(k);
-                        
                     }
+
                     if (SpecBox.SelectedItems.Contains("Mustard"))
                     {
                         burger.AddCondiment(m);
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(m);
                     }
+
                     if (SpecBox.SelectedItems.Contains("Relish"))
                     {
                         burger.AddCondiment(r);
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(r);
                     }
+
                     if (SpecBox.SelectedItems.Contains("Mayo"))
                     {
                         burger.AddCondiment(ma);
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(ma);
                     }
+
                     if (SpecBox.SelectedItems.Contains("Bacon"))
                     {
                         burger.AddCondiment(b);
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(b);
                     }
+
                     if (SpecBox.SelectedItems.Contains("Cheese"))
                     {
                         burger.AddCondiment(c);
-                    }
-                    else
+                    }else
                     {
                         burger.RemoveCondiment(c);
                     }
@@ -146,27 +143,176 @@ namespace WindowsFormsApp1
                     break;
 
                 case 1:
-                    if (SpecBox.SelectedIndex == 0)
+                    if (SpecBox.SelectedItems.Contains("Ketchup"))
                     {
                         hotdog.AddCondiment(k);
                     }
-                    if (SpecBox.SelectedIndex != 0)
+                    else
                     {
-                        burger.RemoveCondiment(k);
+                        hotdog.RemoveCondiment(k);
                     }
 
-
-                    if (SpecBox.SelectedIndex == 1)
+                    if (SpecBox.SelectedItems.Contains("Mustard"))
                     {
-                        burger.AddCondiment(m);
+                        hotdog.AddCondiment(m);
                     }
-                    if (SpecBox.SelectedIndex != 1)
+                    else
                     {
-                        burger.RemoveCondiment(m);
+                        hotdog.RemoveCondiment(m);
                     }
 
-                    burger.Update(totalcalbox, SpecBox);
+                    if (SpecBox.SelectedItems.Contains("Relish"))
+                    {
+                        hotdog.AddCondiment(r);
+                    }
+                    else
+                    {
+                        hotdog.RemoveCondiment(r);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Mayo"))
+                    {
+                        hotdog.AddCondiment(ma);
+                    }
+                    else
+                    {
+                        hotdog.RemoveCondiment(ma);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Bacon"))
+                    {
+                        hotdog.AddCondiment(b);
+                    }
+                    else
+                    {
+                        hotdog.RemoveCondiment(b);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Cheese"))
+                    {
+                        hotdog.AddCondiment(c);
+                    }
+                    else
+                    {
+                        hotdog.RemoveCondiment(c);
+                    }
+
+                    hotdog.Update(totalcalbox, SpecBox);
                     break;
+                case 2:
+                    if (SpecBox.SelectedItems.Contains("Peperonni"))
+                    {
+                        pizza.AddCondiment(k);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(k);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Cheese"))
+                    {
+                        pizza.AddCondiment(m);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(m);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("BBQ Chicken"))
+                    {
+                        pizza.AddCondiment(r);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(r);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Veggies"))
+                    {
+                        pizza.AddCondiment(ma);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(ma);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Ham & Pineapple"))
+                    {
+                        pizza.AddCondiment(b);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(b);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Brooklyn Style"))
+                    {
+                        pizza.AddCondiment(c);
+                    }
+                    else
+                    {
+                        pizza.RemoveCondiment(c);
+                    }
+
+                    pizza.Update(totalcalbox, SpecBox);
+                    break;
+                /*case 3:
+                    if (SpecBox.SelectedItems.Contains("Breast"))
+                    {
+                        cb.calories;
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(k);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Thigh"))
+                    {
+                        chicken.AddCondiment(m);
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(m);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Fried"))
+                    {
+                        chicken.AddCondiment(r);
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(r);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Mayo"))
+                    {
+                        chicken.AddCondiment(ma);
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(ma);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Bacon"))
+                    {
+                        chicken.AddCondiment(b);
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(b);
+                    }
+
+                    if (SpecBox.SelectedItems.Contains("Cheese"))
+                    {
+                        chicken.AddCondiment(c);
+                    }
+                    else
+                    {
+                        chicken.RemoveCondiment(c);
+                    }
+
+                    chicken.Update(totalcalbox, SpecBox);
+                    break;*/
             }
         }
     }

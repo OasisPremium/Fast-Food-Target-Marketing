@@ -19,6 +19,15 @@ namespace WindowsFormsApp1
         private int gramsoffat;
         private int gramsofprotein;
 
+        public Hotdog(TextBox T, ListBox L)
+        {
+            Hotdogbread = new Hotdogbread();
+            sausage = new Sausage();
+            conds = new List<Condiments>();
+            Update(T,L);
+        }
+
+
         public void Update(TextBox T, ListBox L)
         {
             this.gramsoffat = Hotdogbread.GramsOfFat() + sausage.GramsOfFat;

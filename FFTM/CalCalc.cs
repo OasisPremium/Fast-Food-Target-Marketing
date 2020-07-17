@@ -14,12 +14,5 @@ namespace WindowsFormsApp1
             int totalcal = (protein * 4)+(sugar * 4)+(fat * 9);
             return totalcal;
         }
-
-        //Show total calories in textbox
-        static public int TotalCalories()
-        {
-
-            return 0;
-        }
     }
 }

@@ -10,22 +10,22 @@ namespace WindowsFormsApp1
     {
         public override int Calories()
         {
-            throw new NotImplementedException();
+            return CalCalc.Calories(GramsOfProtein(),GramsOfFat(),GramsOfSugar());
         }
 
         public override int GramsOfProtein()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override int GramsOfSugar()
         {
-            throw new NotImplementedException();
+            return 3;
         }
 
         public override int GramsOfFat()
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }
