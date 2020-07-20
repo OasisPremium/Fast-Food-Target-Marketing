@@ -8,24 +8,29 @@ namespace WindowsFormsApp1
 {
     class PizzaDough
     {
+        const int fat = 3;
+        const int protein = 0;
+        const int sugar = 12;
+
+
         public int GetCalories()
         {
-            return 0;
+            return CalCalc.Calories(protein,fat,sugar);
         }
 
         public int GetGramsOfFat()
         {
-            return 3;
+            return fat;
         }
 
         public int GetGramsOfProtein()
         {
-            return 0;
+            return protein;
         }
 
         public int GetGramsOfSugar()
         {
-            return 12;
+            return sugar;
         }
     }
 }

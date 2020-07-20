@@ -8,6 +8,10 @@ namespace WindowsFormsApp1
 {
     class Bacon : Condiments
     {
+        const int fat = 12;
+        const int sugar = 2;
+        const int protein = 4;
+
         public override int GetCalories()
         {
             return CalCalc.Calories(GetGramsOfProtein(),GetGramsOfFat(),GetGramsOfSugar());
@@ -15,17 +19,17 @@ namespace WindowsFormsApp1
 
         public override int GetGramsOfFat()
         {
-            return 12;
+            return fat;
         }
 
         public override int GetGramsOfProtein()
         {
-            return 4;
+            return protein;
         }
 
         public override int GetGramsOfSugar()
         {
-            return 2;
+            return sugar;
         }
     }
 }

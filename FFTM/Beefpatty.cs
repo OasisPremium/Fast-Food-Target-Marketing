@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         private const int gramsOfProteins = 28;
         const int gramsOfSugar = 0;
         const int gramsOfFat = 16;
-
+        
 
         public Beefpatty()
         {
@@ -34,11 +34,6 @@ namespace WindowsFormsApp1
         public int GramsOfSugar
         {
             get { return gramsOfSugar; }
-        }
-
-        public int Calories
-        {
-            get { return calories; }
         }
     }
 }

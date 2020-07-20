@@ -9,14 +9,18 @@ namespace WindowsFormsApp1
 {
     class ChickenThigh : Chicken
     {
+        const int fat = 16;
+        const int protein = 8;
+        const int sugar = 4;
+
         public override int gramsoffat()
         {
-            return 16;
+            return fat;
         }
 
         public override int gramsofprotein()
         {
-            return 8;
+            return protein;
         }
 
         public override int gramsofsugar()

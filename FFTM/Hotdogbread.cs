@@ -9,6 +9,10 @@ namespace WindowsFormsApp1
     class Hotdogbread : Bread
     {
         int calories;
+        const int fat = 1;
+        const int sugar = 14;
+        const int protein = 8;
+
 
         public Hotdogbread()
         {
@@ -17,17 +21,17 @@ namespace WindowsFormsApp1
 
         public override int GramsOfFat()
         {
-            return 123123;
+            return fat;
         }
 
         public override int GramsOfProtein()
         {
-            return 0;
+            return protein;
         }
 
         public override int GramsOfSugar()
         {
-            return 212;
+            return sugar;
         }
     }
 }
