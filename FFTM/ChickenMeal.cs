@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
         private int gramsofprotein;
         private ChickenThigh ct;
         private ChickenBreast cb;
+        private int aaa;
 
         public ChickenMeal(TextBox T, ListBox L)
         {

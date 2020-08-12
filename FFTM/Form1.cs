@@ -30,9 +30,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        //Burger has been clicked
         private void Burger_Click(object sender, EventArgs e)
         {
-            
             SpecBox.Items.Clear();
             SpecBox.Items.Add("Ketchup");
             SpecBox.Items.Add("Mustard");
@@ -42,9 +42,9 @@ namespace WindowsFormsApp1
             SpecBox.Items.Add("Bacon");
             burger = new Burger(totalcalbox, SpecBox);
             choiceIndex = 0;
-
         }
 
+        //Hotdog has been clicked
         private void Hotdog_Click(object sender, EventArgs e)
         {
             SpecBox.Items.Clear();
@@ -58,6 +58,7 @@ namespace WindowsFormsApp1
             choiceIndex = 1;
         }
 
+        //Pizza has been clicked
         private void Pizza_Click(object sender, EventArgs e)
         {
             SpecBox.Items.Clear();
@@ -71,6 +72,7 @@ namespace WindowsFormsApp1
             choiceIndex = 2;
         }
 
+        //Chicken has been clicked
         private void Chicken_Click(object sender, EventArgs e)
         {
             SpecBox.Items.Clear();
@@ -81,12 +83,15 @@ namespace WindowsFormsApp1
             choiceIndex = 3;
         }
 
+        //Switch/ifs block containing logic for choices made in selection boxes
+        // The switch/case statement check which meal has been picked
+        // The if(s) statements check for extras/condiments
+        //AddCondiment is called for adding, RemoveCondiment for removing
+        //As for chicken, it's boolean based and will call
         private void SpecBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             switch (choiceIndex)
             {
-                
                 case 0:
                     if (SpecBox.SelectedItems.Contains("Ketchup"))
                     {
@@ -283,11 +288,16 @@ namespace WindowsFormsApp1
                     {
                         thigh = false;
                     }
-
-                   
                     ch.Update(totalcalbox,thigh,breast,fried);
                     break;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Send all info to database
+            Button btn = sender as Button;
+            btn.Text = "Sent!";
         }
     }
 }

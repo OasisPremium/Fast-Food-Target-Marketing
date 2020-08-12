@@ -49,7 +49,6 @@ namespace WindowsFormsApp1
             {
                 conds.Add(c);
             }
-            
         }
 
         public override void RemoveCondiment(Condiments c)
@@ -58,9 +57,6 @@ namespace WindowsFormsApp1
             {
                 conds.Remove(c);
             }
-            
         }
-        
-
     }
 }

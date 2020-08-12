@@ -8,12 +8,13 @@ namespace WindowsFormsApp1
 {
     class PizzaSauce
     {
-        const int fat = 1;
+        const int fat = 12;
         const int protein = 0;
-        const int sugar = 12;
+        const int sugar = 38;
 
         public int GetCalories()
         {
+            
             return CalCalc.Calories(fat, protein, sugar);
         }
 
